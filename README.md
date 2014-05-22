@@ -35,7 +35,7 @@ Creates an `event` object, where `type` is one of the following possible
 Strings:
 
   - `'click'`
-  - `'dlbclick'`
+  - `'dblclick'`
   - `'keydown'`
   - `'keyup'`
 
