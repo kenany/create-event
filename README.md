@@ -9,9 +9,9 @@ add npm+browserify support.
 ## Example
 
 ``` javascript
-var create = require('create-event');
+var createEvent = require('create-event');
 
-var event = create('keydown', {
+var event = createEvent('keydown', {
   ctrl: true,
   key: 'enter'
 });
