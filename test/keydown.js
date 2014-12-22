@@ -42,3 +42,9 @@ test('keydown - can pass a string keyname', function(t) {
   var e = createEvent('keydown', {key: 'enter'});
   t.equal(e.keyCode, 13);
 });
+
+test('keydown - supports `shift: false`', function(t) {
+  t.plan(1);
+  var e = createEvent('keydown', {key: 'tab', shift: false});
+  t.notOk(e.shiftKey);
+});
