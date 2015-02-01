@@ -23,7 +23,7 @@
     "test": "browserify test/*.js | testling -x chromium"
   },
   "dependencies": {
-    "keycode": "^0.3.0",
+    "keycode": "^1.0.1",
     "lodash.assign": "^2.4.1",
     "lodash.isstring": "^2.4.1"
   },
