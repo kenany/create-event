@@ -1,5 +1,6 @@
 var createEvent = require('../');
 var test = require('tape');
+var window = require('global/window');
 
 test('click - has correct defaults', function(t) {
   t.plan(13);

@@ -1,6 +1,8 @@
 var assign = require('lodash.assign');
 var keycode = require('keycode');
 var isString = require('lodash.isstring');
+var document = require('global/document');
+var window = require('global/window');
 
 var defaults = {
   alt: false,
@@ -102,7 +104,7 @@ function createKeyboardEvent(type, options) {
       get: function() { return options.key; }
     });
     Object.defineProperty(e, 'shiftKey', {
-      get: function () { return options.shift; }
+      get: function() { return options.shift; }
     });
   }
 
