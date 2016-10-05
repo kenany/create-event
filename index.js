@@ -57,7 +57,7 @@ function createMouseEvent(type, options) {
     options.detail,
     options.screenX,
     options.screenY,
-    options.clientX ,
+    options.clientX,
     options.clientY,
     options.ctrl,
     options.alt,
@@ -155,6 +155,6 @@ function createIeEvent(type, options) {
   return e;
 }
 
-module.exports = !!document.createEvent
+module.exports = document.createEvent
   ? createEvent
   : createIeEvent;
