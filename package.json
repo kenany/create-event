@@ -20,7 +20,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "browserify test/*.js | testling -x chromium"
+    "pretest": "eslint *.js test/*.js",
+    "test": "browserify test/*.js | tape-run"
   },
   "dependencies": {
     "global": "^4.3.0",
@@ -29,8 +30,10 @@
     "lodash.isstring": "^4.0.1"
   },
   "devDependencies": {
+    "@kenan/eslint-config": "^4.0.0",
     "browserify": "^13.0.0",
+    "eslint": "^3.6.0",
     "tape": "^4.0.0",
-    "testling": "^1.6.1"
+    "tape-run": "^2.1.4"
   }
 }
