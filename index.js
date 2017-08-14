@@ -22,6 +22,8 @@ var defaults = {
   view: window
 };
 
+var isChrome = navigator.userAgent.indexOf('Chrome') !== -1;
+
 /**
  * Back an `options` object by defaults, and convert some convenience features.
  *
@@ -93,7 +95,7 @@ function createKeyboardEvent(type, options) {
   );
 
   // http://stackoverflow.com/a/10520017
-  if (e.keyCode !== options.key) {
+  if (isChrome && e.keyCode !== options.key) {
     Object.defineProperty(e, 'keyCode', {
       get: function() { return options.key; }
     });
