@@ -40,6 +40,6 @@ test('keyup - can set options', function(t) {
 
 test('keyup - can pass a string keyname', function(t) {
   t.plan(1);
-  var e = createEvent('keyup', {key: 'enter'});
+  var e = createEvent('keyup', { key: 'enter' });
   t.equal(e.keyCode, 13);
 });
