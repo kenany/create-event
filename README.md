@@ -1,7 +1,5 @@
 # create-event
 
-[![Dependency Status](https://gemnasium.com/KenanY/create-event.svg)](https://gemnasium.com/KenanY/create-event)
-
 Create an `event` object.
 
 Rewrite of
