@@ -28,7 +28,7 @@
   "dependencies": {
     "global": "^4.4.0",
     "keycode": "^2.2.0",
-    "lodash.assign": "^4.0.6",
+    "lodash.assign": "^4.2.0",
     "lodash.isstring": "^4.0.1"
   },
   "devDependencies": {
