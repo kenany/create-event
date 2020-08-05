@@ -1,3 +1,10 @@
+### [1.0.13](https://github.com/KenanY/create-event/compare/1.0.12...1.0.13) (2020-08-05)
+
+
+### Bug Fixes
+
+* **deps:** lodash.assign@4.2.0 ([c5e28f7](https://github.com/KenanY/create-event/commit/c5e28f7cc464ada40b531d2102757c3dc9e28c7c))
+
 ### [1.0.12](https://github.com/KenanY/create-event/compare/1.0.11...1.0.12) (2020-08-05)
 
 
