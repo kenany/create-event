@@ -39,7 +39,7 @@
     "browserify": "^16.5.2",
     "conventional-changelog-conventionalcommits": "^4.4.0",
     "eslint": "^7.11.0",
-    "semantic-release": "^17.1.1",
+    "semantic-release": "^17.2.1",
     "tape": "5.0.1",
     "tape-run": "^8.0.0"
   }
