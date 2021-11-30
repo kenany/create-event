@@ -1,3 +1,10 @@
+### [1.0.14](https://github.com/KenanY/create-event/compare/1.0.13...1.0.14) (2021-11-30)
+
+
+### Bug Fixes
+
+* **deps:** keycode@2.2.1 ([687c51a](https://github.com/KenanY/create-event/commit/687c51a874e01ec2a157de1a030fe306389a087d))
+
 ### [1.0.13](https://github.com/KenanY/create-event/compare/1.0.12...1.0.13) (2020-08-05)
 
 
