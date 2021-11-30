@@ -40,7 +40,7 @@
     "conventional-changelog-conventionalcommits": "^4.6.1",
     "eslint": "^7.32.0",
     "semantic-release": "^18.0.0",
-    "tape": "^5.3.1",
+    "tape": "^5.3.2",
     "tape-run": "^9.0.0"
   }
 }
