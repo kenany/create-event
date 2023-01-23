@@ -5,7 +5,7 @@ jobs:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/setup-node@v3.5.1
+    - uses: actions/setup-node@v3.6.0
       with:
         node-version: 18
     - name: Update npm
@@ -18,7 +18,4 @@ jobs:
       with:
         useLockFile: false
     - run: npm ls
-    - name: Test
-      uses: gabrielbb/xvfb-action@v1.6
-      with:
-        run: npm test
+    - run: xvfb-run -a npm test
