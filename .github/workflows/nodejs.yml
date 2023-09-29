@@ -1,5 +1,7 @@
 name: nodejs
-on: [pull_request, push]
+on: [push, pull_request, merge_group]
+permissions:
+  contents: read
 jobs:
   build:
     timeout-minutes: 10
@@ -7,7 +9,7 @@ jobs:
     steps:
     - uses: actions/setup-node@v3.8.1
       with:
-        node-version: 18
+        node-version: 20
     - name: Update npm
       run: |
         npm install -g npm
