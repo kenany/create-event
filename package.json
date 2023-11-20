@@ -37,7 +37,7 @@
     "@semantic-release/git": "^10.0.1",
     "browserify": "^17.0.0",
     "conventional-changelog-conventionalcommits": "^7.0.2",
-    "eslint": "^8.52.0",
+    "eslint": "^8.54.0",
     "semantic-release": "^22.0.7",
     "tape": "^5.7.2",
     "tape-run": "^11.0.0"
