@@ -7,7 +7,7 @@ permissions:
   contents: read
 jobs:
   release:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     permissions:
       contents: write
       id-token: write
@@ -25,7 +25,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4.2.2
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1.10.4
+        uses: bahmutov/npm-install@v1.10.8
         with:
           useLockFile: false
       - run: npm audit signatures
