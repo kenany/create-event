@@ -1,11 +1,11 @@
-var test = require('tape');
-var window = require('global/window');
+const test = require('tape');
+const window = require('global/window');
 
-var createEvent = require('../');
+const createEvent = require('../');
 
-test('dblclick - has correct defaults', function(t) {
+test('dblclick - has correct defaults', (t) => {
   t.plan(13);
-  var e = createEvent('dblclick');
+  const e = createEvent('dblclick');
   t.ok(e.bubbles);
   t.ok(e.cancelable);
   t.equal(e.view, window);
@@ -21,9 +21,9 @@ test('dblclick - has correct defaults', function(t) {
   t.equal(e.button, 0);
 });
 
-test('dblclick - can set options', function(t) {
+test('dblclick - can set options', (t) => {
   t.plan(13);
-  var e = createEvent('dblclick', {
+  const e = createEvent('dblclick', {
     bubbles: false,
     cancelable: false,
     screenX: 1,
@@ -34,7 +34,7 @@ test('dblclick - can set options', function(t) {
     alt: true,
     shift: true,
     meta: true,
-    button: 2
+    button: 2,
   });
   t.notOk(e.bubbles);
   t.notOk(e.cancelable);

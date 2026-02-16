@@ -1,11 +1,11 @@
-var test = require('tape');
-var window = require('global/window');
+const test = require('tape');
+const window = require('global/window');
 
-var createEvent = require('../');
+const createEvent = require('../');
 
-test('keyup - has correct defaults', function(t) {
+test('keyup - has correct defaults', (t) => {
   t.plan(9);
-  var e = createEvent('keyup');
+  const e = createEvent('keyup');
   t.ok(e.bubbles);
   t.ok(e.cancelable);
   t.equal(e.view, window);
@@ -17,16 +17,16 @@ test('keyup - has correct defaults', function(t) {
   t.equal(e.charCode, 0);
 });
 
-test('keyup - can set options', function(t) {
+test('keyup - can set options', (t) => {
   t.plan(9);
-  var e = createEvent('keyup', {
+  const e = createEvent('keyup', {
     bubbles: false,
     cancelable: false,
     ctrl: true,
     alt: true,
     shift: true,
     meta: true,
-    key: 42
+    key: 42,
   });
   t.notOk(e.bubbles);
   t.notOk(e.cancelable);
@@ -39,8 +39,8 @@ test('keyup - can set options', function(t) {
   t.equal(e.charCode, 42);
 });
 
-test('keyup - can pass a string keyname', function(t) {
+test('keyup - can pass a string keyname', (t) => {
   t.plan(1);
-  var e = createEvent('keyup', { key: 'enter' });
+  const e = createEvent('keyup', { key: 'enter' });
   t.equal(e.keyCode, 13);
 });

@@ -1,10 +1,10 @@
-var assign = require('lodash.assign');
-var keycode = require('keycode');
-var isString = require('lodash.isstring');
-var document = require('global/document');
-var window = require('global/window');
+const assign = require('lodash.assign');
+const keycode = require('keycode');
+const isString = require('lodash.isstring');
+const document = require('global/document');
+const window = require('global/window');
 
-var defaults = {
+const defaults = {
   alt: false,
   bubbles: true,
   button: 0,
@@ -19,7 +19,7 @@ var defaults = {
   screenX: 0,
   screenY: 0,
   shift: false,
-  view: window
+  view: window,
 };
 
 /**
@@ -48,7 +48,7 @@ function clean(type, options) {
  */
 function createMouseEvent(type, options) {
   options = clean(type, options);
-  var e = document.createEvent('MouseEvent');
+  const e = document.createEvent('MouseEvent');
   e.initMouseEvent(
     type,
     options.bubbles,
@@ -77,7 +77,7 @@ function createMouseEvent(type, options) {
  */
 function createKeyboardEvent(type, options) {
   options = clean(type, options);
-  var e = document.createEvent('KeyboardEvent');
+  const e = document.createEvent('KeyboardEvent');
   (e.initKeyEvent || e.initKeyboardEvent).call(
     e,
     type,
@@ -95,16 +95,24 @@ function createKeyboardEvent(type, options) {
   // http://stackoverflow.com/a/10520017
   if (e.keyCode !== options.key) {
     Object.defineProperty(e, 'keyCode', {
-      get: function() { return options.key; }
+      get() {
+        return options.key;
+      },
     });
     Object.defineProperty(e, 'charCode', {
-      get: function() { return options.key; }
+      get() {
+        return options.key;
+      },
     });
     Object.defineProperty(e, 'which', {
-      get: function() { return options.key; }
+      get() {
+        return options.key;
+      },
     });
     Object.defineProperty(e, 'shiftKey', {
-      get: function() { return options.shift; }
+      get() {
+        return options.shift;
+      },
     });
   }
 
@@ -125,6 +133,8 @@ function createEvent(type, options) {
     case 'keydown':
     case 'keyup':
       return createKeyboardEvent(type, options);
+    default:
+      throw new Error(`Unknown event type: '${type}'`);
   }
 }
 
@@ -136,7 +146,7 @@ function createEvent(type, options) {
  */
 function createIeEvent(type, options) {
   options = clean(type, options);
-  var e = document.createEventObject();
+  const e = document.createEventObject();
   e.altKey = options.alt;
   e.bubbles = options.bubbles;
   e.button = options.button;
@@ -155,6 +165,4 @@ function createIeEvent(type, options) {
   return e;
 }
 
-module.exports = document.createEvent
-  ? createEvent
-  : createIeEvent;
+module.exports = document.createEvent ? createEvent : createIeEvent;
