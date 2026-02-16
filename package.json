@@ -1,6 +1,6 @@
 {
   "name": "create-event",
-  "version": "1.0.14",
+  "version": "0.0.0-semantic-release",
   "description": "Create an event object",
   "keywords": [
     "browser",
@@ -8,7 +8,10 @@
     "dispatch",
     "event"
   ],
-  "repository": "github:kenany/create-event",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenany/create-event.git"
+  },
   "license": "MIT",
   "author": "Kenan Yildirim <kenan@kenany.me> (https://kenany.me/)",
   "main": "index.js",
@@ -32,9 +35,8 @@
     "lodash.isstring": "^4.0.1"
   },
   "devDependencies": {
-    "@kenan/eslint-config": "11.1.18",
-    "@semantic-release/changelog": "6.0.3",
-    "@semantic-release/git": "10.0.1",
+    "@containerbase/semantic-release-pnpm": "1.3.21",
+    "@kenan/eslint-config": "11.1.16",
     "browserify": "17.0.1",
     "conventional-changelog-conventionalcommits": "9.1.0",
     "eslint": "8.57.1",
